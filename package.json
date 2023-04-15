@@ -1,0 +1,86 @@
+{
+  "name": "bff-admin-api-ingress",
+  "version": "1.0.1",
+  "description": "bff-admin-api-ingress",
+  "main": "bin/www",
+  "scripts": {
+    "local-country-cl": "cross-env NODE_ENV=local NODE_ENV_APP=country-cl nodemon bin/www",
+    "dev-country-cl": "cross-env NODE_ENV=development NODE_ENV_APP=country-cl bin/www",
+    "local-cl": "cross-env NODE_ENV=local NODE_ENV_APP=country-cl nodemon bin/www",
+    "dev-cl": "cross-env NODE_ENV=development NODE_ENV_APP=country-cl bin/www",
+    "unit-test": "cross-env ./node_modules/mocha/bin/mocha ./app/**/*.spec.js ./app/**/**/*.spec.js ./app/**/**/**/*.spec.js -t 10000",
+    "coverage": "cross-env nyc --reporter=text-summary --cache=false ./node_modules/mocha/bin/mocha ./app/**/*.spec.js ./app/**/**/*.spec.js ./app/**/**/**/*.spec.js -t 10000  ",
+    "coverage-table": "cross-env nyc --cache=false ./node_modules/mocha/bin/mocha   ./app/**/*.spec.js ./app/**/**/*.spec.js ./app/**/**/**/*.spec.js -t 10000  ",
+    "coverage-check": "cross-env nyc  check-coverage --lines 80 --functions 80 --branches 80 --statements 80 ./node_modules/mocha/bin/mocha ./app/**/*.spec.js ./app/**/**/*.spec.js ./app/**/**/**/*.spec.js -t 10000 ",
+    "lcov": "cross-env nyc --reporter=lcov --reporter=text --cache=false ./node_modules/mocha/bin/mocha  --recursive ./app/**/*.spec.js ./app/**/**/*.spec.js ./app/**/**/**/*.spec.js -t 10000 && cp coverage/lcov.info . && rm -rf coverage",
+    "mutation-test": "cross-env node_modules/@stryker-mutator/core/bin/stryker run",
+    "debug-cl": "cross-env NODE_ENV=local NODE_ENV_APP=country-cl node --nolazy --inspect-brk=9229 ./bin/www",
+    "eslint": "cross-env node_modules/.bin/eslint app.js ./app/**/*.js ./app/**/**/*.js ./app/**/**/**/*.js --quiet --fix",
+    "eslint-w": "cross-env node_modules/.bin/esw app.js ./app/**/*.js -w --quiet"
+  },
+  "nyc": {
+    "include": [
+      "**/*.js",
+      "**/**/*.js",
+      "**/**/**/*.js"
+    ],
+    "exclude": [
+      "**/*.spec.js",
+      "**/**/*.spec.js",
+      "**/**/**/*.spec.js",
+      "app/config/**",
+      "app/schemas/country-cl/**",
+      "app/schemas/common/**",
+      "coverage/**",
+      "mochawesome-report/**",
+      "iso/**",
+      "*.js"
+    ],
+    "all": true
+  },
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.21.0",
+    "body-parser": "^1.18.3",
+    "compression": "^1.7.3",
+    "cors": "^2.8.5",
+    "debug": "^4.1.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.16.4",
+    "express-routemap": "^1.1.0",
+    "joi": "^14.3.1",
+    "lodash": "^4.17.11",
+    "request-promise": "^4.2.4",
+    "uuid": "^8.3.0"
+  },
+  "devDependencies": {
+    "cross-env": "^5.2.0",
+    "@stryker-mutator/core": "^1.3.1",
+    "@stryker-mutator/javascript-mutator": "^1.3.1",
+    "@stryker-mutator/mocha-framework": "^1.3.1",
+    "@stryker-mutator/mocha-runner": "^1.3.1",
+    "stryker-cli": "^1.0.0",
+    "async-require": "^1.2.2",
+    "chai": "^4.2.0",
+    "eslint": "^5.14.1",
+    "eslint-config-airbnb": "^15.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.12.4",
+    "eslint-plugin-security": "^1.4.0",
+    "eslint-watch": "^3.1.5",
+    "mocha": "^6.0.2",
+    "mockery": "^2.1.0",
+    "nodemon": "^1.18.9",
+    "npm-run-all": "^4.0.2",
+    "nyc": "^13.3.0",
+    "sinon": "^7.2.4",
+    "stubby": "^4.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/spro80/bffAdmin.git"
+  },
+  "author": "",
+  "homepage": "https://github.com/spro80/bffAdmin#readme"
+}
