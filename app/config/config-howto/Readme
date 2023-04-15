@@ -1,0 +1,5 @@
+If you want to use a new configuration. You must create a folder with the business name and the configs.
+
+Example secret
+#!/bin/bash
+export NODE_ENV_APP=FOLDER_CONFIG_NAME
