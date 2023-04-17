@@ -9,9 +9,15 @@ class AxiosController {
     });
   }
 
-  requestAxiosGet(method, uri, headers, timeout) {
+  /*requestAxiosGet(method, uri, headers, timeout) {
     return axios({
       method, url: uri, headers, timeout
+    });
+  }*/
+
+  requestAxiosGet(uri, headers, timeout) {
+    return axios({
+      url: uri, headers, timeout
     });
   }
 }

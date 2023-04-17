@@ -15,11 +15,21 @@ function SchemaValidationMiddleware(req, res, next) {
   
   try {
     const service = req.params.service;
+    const httpMethod = req.method;
+    const serviceHttpMethod = service + httpMethod;
+
+    req.config = {
+      serviceName: service,
+      httpMethod: httpMethod.toLowerCase()
+    };
+
     console.log(`module:[${moduleName}] | method:[${method}] | description: [service value] | service:[${service}]`);
+    console.log(`module:[${moduleName}] | method:[${method}] | description: [service value] | httpMethod:[${httpMethod}]`);
+    console.log(`module:[${moduleName}] | method:[${method}] | description: [service value] | serviceHttpMethod:[${serviceHttpMethod}]`);
   
     console.log(`module:[${moduleName}] | method:[${method}] | description: [calling to getSchema]`);
-    const schema = getSchema(service);
-    console.log(`module:[${moduleName}] | method:[${method}] | description: [getSchema was called successfully]`);
+    //const schema = getSchema(service);
+    const schema = getSchema(serviceHttpMethod);
     
     if (schema) {
       console.log(`module:[${moduleName}] | method:[${method}] | description: [schema was found, calling to joi validate]`);

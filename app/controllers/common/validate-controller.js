@@ -12,13 +12,16 @@ class ValidateController {
 
     //const utilTime = loggerUtilTime.time();
     try {
-
       console.log(`module:${moduleName} | method:${method} In try.`);
-      /*
-      const service = req.params.service;
-      const uri = _.get(config.managers, service, '');
-      */
-      const uri = "http://jsonplaceholder.typicode.com/posts";
+      const configServiceName = req.config.serviceName;
+      const configHttpMethod = req.config.httpMethod;
+
+      //Create URL
+      const baseUrl = '';
+      const endpoint = config.managers[configServiceName][configHttpMethod];
+      const url = `${baseUrl}${endpoint}`;
+      //const uri = "http://jsonplaceholder.typicode.com/posts"; //POST
+      //const uriGet ="https://jsonplaceholder.typicode.com/users"; //GET
 
       //Create Headers
       const headers = {
@@ -30,46 +33,21 @@ class ValidateController {
         traceid: uuidv4()
       };
 
-      //Create Body
-      console.log(req.body);
-      const body = req.body;
-
       console.log(`module:${moduleName} | method:${method} Calling service`);
       const axiosController = new AxiosController();
-      const response = await axiosController.requestAxiosPost(uri, headers, body, config.msConfig.timeOut);
 
+      let response = {};
+      if ( configHttpMethod == 'post') {
+        response = await axiosController.requestAxiosPost(url, headers, req.body, config.msConfig.timeOut);
+
+      }else if ( configHttpMethod == 'get') {
+        response = await axiosController.requestAxiosGet(url, headers, config.msConfig.timeOut);
+      }
+      
       console.log(`module:${moduleName} | method:${method} Service was called successfully`);
       console.log(response.status);
 
-      const responseTest = {
-        data: {
-          status: 201,
-          descripcion: 'The resource was created successfully'
-        }
-      };
-
-      /*
-      const response = {
-        data: {
-          status: 404,
-          descripcion: 'The User 14515778 was not found'
-        }
-      };
-
-      const response = {
-        data: {
-          status: 400,
-          descripcion: 'The Request is not valid'
-        }
-      };
-      const response = {
-        data: {
-          status: 500,
-          descripcion: 'Internal error server'
-        }
-      };
-      */
-      return responseTest;
+      return response;
     } catch (e) {
       console.log(`module:${moduleName} | method:${method} | Error:${e.message}`);
       throw e;
