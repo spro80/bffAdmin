@@ -1,7 +1,7 @@
 module.exports = {
   msConfig: {
     name: 'api bff admin ingress',
-    port: 3000,
+    port: 80,
     country: 'CL',
     commerce: 'MEDICAL',
     timeOut: 24000,
