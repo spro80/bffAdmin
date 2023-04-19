@@ -18,7 +18,7 @@ async function ValidateMiddleware(req, res, next) {
     const customResponse = {
         status: response.status,
         data: response.data,
-        description: 'The resource was created successfully'
+        description: createMessageDescription(req.method.toLowerCase()) //'The resource was created successfully'
     };
 
     //next();
@@ -34,6 +34,20 @@ async function ValidateMiddleware(req, res, next) {
       error: error.message
     };
     return res.json(customResponse);
+  }
+}
+
+function createMessageDescription(httpMethod) {
+  console.log("message:::"+httpMethod);
+  switch(httpMethod) {
+    case 'get':
+      return 'The request was called successfully';
+    case 'post':
+        return 'The resource was created successfully';
+    case 'delete':
+          return 'The resource was deleted successfully';
+    default:
+      return "Default Message"
   }
 }
 

@@ -20,6 +20,12 @@ class AxiosController {
       url: uri, headers, timeout
     });
   }
+
+  requestAxiosDelete(uri, headers, timeout) {
+    return axios({
+      url: uri, headers, timeout
+    });
+  }
 }
 
 module.exports = AxiosController;

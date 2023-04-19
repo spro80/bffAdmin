@@ -39,10 +39,11 @@ class ValidateController {
       let response = {};
       if ( configHttpMethod == 'post') {
         response = await axiosController.requestAxiosPost(url, headers, req.body, config.msConfig.timeOut);
-
       }else if ( configHttpMethod == 'get') {
         response = await axiosController.requestAxiosGet(url, headers, config.msConfig.timeOut);
-      }
+      }else if ( configHttpMethod == 'delete') {
+        response = await axiosController.requestAxiosDelete(url, headers, config.msConfig.timeOut);
+      } 
       
       console.log(`module:${moduleName} | method:${method} Service was called successfully`);
       console.log(response.status);
