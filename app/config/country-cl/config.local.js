@@ -14,10 +14,19 @@ module.exports = {
     login: 'http://localhost:3100/api/manager/login',
     users: {
       urlBase: "",
+      get: "http://jsonplaceholder.typicode.com/users",
+      post: "http://localhost:9091/registerUser",
+      delete: "http://jsonplaceholder.typicode.com/posts"
+    }
+    /*users: {
+      urlBase: "",
       get: "https://jsonplaceholder.typicode.com/users",
       post: "http://jsonplaceholder.typicode.com/posts",
       delete: "http://jsonplaceholder.typicode.com/posts"
-    }
+    }*/
+
+
+    
   },
   clientPublicKey: process.env.RSA_2048_PUBLIC_CLIENT,
   clientPrivateKey: process.env.RSA_2048_PRIVATE_CLIENT
