@@ -9,11 +9,11 @@ class AxiosController {
     });
   }
 
-  /*requestAxiosGet(method, uri, headers, timeout) {
+  requestAxiosPut(uri, headers, body, timeout) {
     return axios({
-      method, url: uri, headers, timeout
+      method: 'put', url: uri, headers, data: body, timeout, responseType: 'json',
     });
-  }*/
+  }
 
   requestAxiosGet(uri, headers, timeout) {
     return axios({
@@ -22,9 +22,7 @@ class AxiosController {
   }
 
   requestAxiosDelete(uri, headers, timeout) {
-    return axios({
-      url: uri, headers, timeout
-    });
+    return axios.delete(uri);
   }
 }
 
