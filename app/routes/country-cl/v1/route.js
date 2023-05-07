@@ -17,6 +17,7 @@ middlewaresCl.push(ValidateMiddleware);
 
 const router = express.Router();
 router.post('/:service', middlewaresCl);
+router.put('/:service', middlewaresCl);
 router.get('/:service', middlewaresCl);
 router.delete('/:service', middlewaresCl);
 module.exports = router;
