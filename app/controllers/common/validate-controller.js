@@ -19,7 +19,7 @@ class ValidateController {
       //Create URL
       const baseUrl = '';
       const endpoint = config.managers[configServiceName][configHttpMethod];
-      const url = `${baseUrl}${endpoint}`;
+      let url = `${baseUrl}${endpoint}`;
       //const uri = "http://jsonplaceholder.typicode.com/posts"; //POST
       //const uriGet ="https://jsonplaceholder.typicode.com/users"; //GET
 
@@ -39,9 +39,25 @@ class ValidateController {
       let response = {};
       if ( configHttpMethod == 'post') {
         response = await axiosController.requestAxiosPost(url, headers, req.body, config.msConfig.timeOut);
-      }else if ( configHttpMethod == 'get') {
+      } else if ( configHttpMethod == 'put') {
+        console.log(`module:${moduleName} | method:${method} Calling service | description:${url}`);
+        response = await axiosController.requestAxiosPut(url, headers, req.body, config.msConfig.timeOut);
+      } else if ( configHttpMethod == 'get') {
+        let userId = ''
+        if ( Object.keys(req.query).length > 0 ) {
+          console.log(req.query);
+          userId = req.query.userId
+          console.log("validate controller: userId distinto de vacio");
+          url = url + '?userId='+userId
+        }
+        console.log(url);
         response = await axiosController.requestAxiosGet(url, headers, config.msConfig.timeOut);
       }else if ( configHttpMethod == 'delete') {
+        console.log(`module:${moduleName} | method:${method} calling requestAxiosDelete`);
+        console.log(url);
+        const userId = req.query.userId
+        url = `${url}/userId/${userId}`
+        console.log(url);
         response = await axiosController.requestAxiosDelete(url, headers, config.msConfig.timeOut);
       } 
       
