@@ -7,13 +7,28 @@ provider "aws" {
 resource "aws_security_group" "security_group_access_ssh_bff" {
   name        = "security-group-access-ssh-bff"
   description = "Allow SSH access"
-  #vpc_id      = aws_vpc.vpc_bff.id # Reemplaza con el ID de tu VPC
+
+  #vpc_id = aws_vpc.vpc_bff.id
 
   ingress {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  ingress {
+    from_port   = 3000
+    to_port     = 3000
+    protocol    = "tcp"
+    cidr_blocks = ["127.0.0.1/32"]
+  }
+
+  ingress {
+    from_port   = 3000
+    to_port     = 3000
+    protocol    = "tcp"
+    cidr_blocks = ["200.28.33.52/32"]
   }
 
   egress {
@@ -30,7 +45,7 @@ resource "aws_instance" "instance_micro_bff_admin" {
   key_name      = "terraform_key_pair_2023" # Nombre de la clave SSH existente en tu cuenta de AWS
 
   vpc_security_group_ids = [aws_security_group.security_group_access_ssh_bff.id]
-  #subnet_id              = aws_subnet.subnet_bff.id
+  #subnet_id = aws_subnet.subnet_bff.id  # Asegúrate de definir la subnet
 
   # Utiliza el ARN completo del perfil IAM en lugar del nombre
   #iam_instance_profile = aws_iam_role.ec2_role.arn
