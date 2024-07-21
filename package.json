@@ -6,7 +6,7 @@
   "scripts": {
     "local-country-cl": "cross-env NODE_ENV=local NODE_ENV_APP=country-cl nodemon bin/www",
     "dev-country-cl": "cross-env NODE_ENV=development NODE_ENV_APP=country-cl bin/www",
-    "local-cl": "cross-env NODE_ENV=local NODE_ENV_APP=country-cl nodemon bin/www",
+    "local-cl": "cross-env NODE_ENV=local NODE_ENV_APP=country-cl",
     "dev-cl": "cross-env NODE_ENV=development NODE_ENV_APP=country-cl bin/www",
     "unit-test": "cross-env ./node_modules/mocha/bin/mocha ./app/**/*.spec.js ./app/**/**/*.spec.js ./app/**/**/**/*.spec.js -t 10000",
     "coverage": "cross-env nyc --reporter=text-summary --cache=false ./node_modules/mocha/bin/mocha ./app/**/*.spec.js ./app/**/**/*.spec.js ./app/**/**/**/*.spec.js -t 10000  ",
