@@ -22,3 +22,9 @@ npm run local-cl
         "profileAllTime": true
     }
 }
+
+4.- AWS:
+
+Servicio IAM
+Servicio EC2
+Servicio CloudWatch

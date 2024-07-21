@@ -6,19 +6,637 @@
 	},
 	"item": [
 		{
+			"name": "adminUser",
+			"item": [
+				{
+					"name": "UserAddDavid",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "country",
+								"value": "CL",
+								"type": "text"
+							},
+							{
+								"key": "commerce",
+								"value": "MEDICAL",
+								"type": "text"
+							},
+							{
+								"key": "channel",
+								"value": "WEB",
+								"type": "text"
+							},
+							{
+								"key": "sucursal",
+								"value": "coquimbo",
+								"type": "text"
+							},
+							{
+								"key": "usuario",
+								"value": "14515778",
+								"type": "text"
+							},
+							{
+								"key": "traceid",
+								"value": "123456789",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"userId\": \"14515778\",\n  \"rut\": \"145157781\",\n  \"userName\": \"david\",\n  \"password\": \"123456\",\n  \"email\": \"spro80@gmail.com\",\n  \"firstName\": \"david\",\n  \"lastName\": \"diaz\",\n  \"valid\": true,\n  \"profile\": {\n      \"profileId\": 1,\n      \"profileStatus\": true,\n      \"profileDateInit\": \"2024\",\n      \"profileDateEnd\": \"2024\",\n      \"profileAllTime\": true\n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/bff/ingress/users",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"bff",
+								"ingress",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UserAddMaria",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "country",
+								"value": "CL",
+								"type": "text"
+							},
+							{
+								"key": "commerce",
+								"value": "MEDICAL",
+								"type": "text"
+							},
+							{
+								"key": "channel",
+								"value": "WEB",
+								"type": "text"
+							},
+							{
+								"key": "sucursal",
+								"value": "coquimbo",
+								"type": "text"
+							},
+							{
+								"key": "usuario",
+								"value": "14515778",
+								"type": "text"
+							},
+							{
+								"key": "traceid",
+								"value": "123456789",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"userId\": \"6484469\",\n  \"rut\": \"64844695\",\n  \"userName\": \"maria\",\n  \"password\": \"123456\",\n  \"email\": \"maria@gmail.com\",\n  \"firstName\": \"maria\",\n  \"lastName\": \"sierra\",\n  \"valid\": true,\n  \"profile\": {\n      \"profileId\": 2,\n      \"profileStatus\": true,\n      \"profileDateInit\": \"2023\",\n      \"profileDateEnd\": \"2024\",\n      \"profileAllTime\": true\n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/bff/ingress/users",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"bff",
+								"ingress",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UserUpdateMaria",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "country",
+								"value": "CL",
+								"type": "text"
+							},
+							{
+								"key": "commerce",
+								"value": "MEDICAL",
+								"type": "text"
+							},
+							{
+								"key": "channel",
+								"value": "WEB",
+								"type": "text"
+							},
+							{
+								"key": "sucursal",
+								"value": "coquimbo",
+								"type": "text"
+							},
+							{
+								"key": "usuario",
+								"value": "14515778",
+								"type": "text"
+							},
+							{
+								"key": "traceid",
+								"value": "123456789",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"userId\": \"64844693333\",    \n  \"rut\": \"64844695\",\n  \"userName\": \"maria\",\n  \"password\": \"Maria666*\",\n  \"email\": \"maria@gmail.com\",\n  \"firstName\": \"mariaXYZ\",\n  \"lastName\": \"sierraZZZ\",\n  \"valid\": true,\n  \"profile\": {\n      \"profileId\": 2,\n      \"profileStatus\": true,\n      \"profileDateInit\": \"2024\",\n      \"profileDateEnd\": \"2024\",\n      \"profileAllTime\": true\n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/bff/ingress/users",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"bff",
+								"ingress",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UserUpdateDavid",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "country",
+								"value": "CL",
+								"type": "text"
+							},
+							{
+								"key": "commerce",
+								"value": "MEDICAL",
+								"type": "text"
+							},
+							{
+								"key": "channel",
+								"value": "WEB",
+								"type": "text"
+							},
+							{
+								"key": "sucursal",
+								"value": "coquimbo",
+								"type": "text"
+							},
+							{
+								"key": "usuario",
+								"value": "14515778",
+								"type": "text"
+							},
+							{
+								"key": "traceid",
+								"value": "123456789",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"userId\": \"14515778\",    \n  \"rut\": \"145157781\",\n  \"userName\": \"davidddd\",\n  \"password\": \"123456999\",\n  \"email\": \"spro80000@gmail.com\",\n  \"firstName\": \"davidddd\",\n  \"lastName\": \"diazzzzz\",\n  \"valid\": false,\n  \"profile\": {\n      \"profileId\": 1,\n      \"profileStatus\": true,\n      \"profileDateInit\": \"2024\",\n      \"profileDateEnd\": \"2024\",\n      \"profileAllTime\": true\n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/bff/ingress/users",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"bff",
+								"ingress",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UserGetAll",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "country",
+								"value": "CL",
+								"type": "text"
+							},
+							{
+								"key": "commerce",
+								"value": "MEDICAL",
+								"type": "text"
+							},
+							{
+								"key": "channel",
+								"value": "WEB",
+								"type": "text"
+							},
+							{
+								"key": "sucursal",
+								"value": "coquimbo",
+								"type": "text"
+							},
+							{
+								"key": "usuario",
+								"value": "14515778",
+								"type": "text"
+							},
+							{
+								"key": "traceId",
+								"value": "123456789",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/bff/ingress/users",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"bff",
+								"ingress",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UserGetMaria",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "country",
+								"value": "CL",
+								"type": "text"
+							},
+							{
+								"key": "commerce",
+								"value": "MEDICAL",
+								"type": "text"
+							},
+							{
+								"key": "channel",
+								"value": "WEB",
+								"type": "text"
+							},
+							{
+								"key": "sucursal",
+								"value": "coquimbo",
+								"type": "text"
+							},
+							{
+								"key": "usuario",
+								"value": "14515778",
+								"type": "text"
+							},
+							{
+								"key": "traceId",
+								"value": "123456789",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/bff/ingress/users?userId=64844695",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"bff",
+								"ingress",
+								"users"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "64844695"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UserGetDavid",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "country",
+								"value": "CL",
+								"type": "text"
+							},
+							{
+								"key": "commerce",
+								"value": "MEDICAL",
+								"type": "text"
+							},
+							{
+								"key": "channel",
+								"value": "WEB",
+								"type": "text"
+							},
+							{
+								"key": "sucursal",
+								"value": "coquimbo",
+								"type": "text"
+							},
+							{
+								"key": "usuario",
+								"value": "14515778",
+								"type": "text"
+							},
+							{
+								"key": "traceId",
+								"value": "123456789",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/bff/ingress/users?userId=145157781",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"bff",
+								"ingress",
+								"users"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "145157781"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UserDeleteMaria",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "country",
+								"value": "CL",
+								"type": "text"
+							},
+							{
+								"key": "commerce",
+								"value": "MEDICAL",
+								"type": "text"
+							},
+							{
+								"key": "channel",
+								"value": "WEB",
+								"type": "text"
+							},
+							{
+								"key": "sucursal",
+								"value": "coquimbo",
+								"type": "text"
+							},
+							{
+								"key": "usuario",
+								"value": "14515778",
+								"type": "text"
+							},
+							{
+								"key": "traceId",
+								"value": "123456789",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/bff/ingress/users?userId=64844695",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"bff",
+								"ingress",
+								"users"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "64844695"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UserDeleteDavid",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "country",
+								"value": "CL",
+								"type": "text"
+							},
+							{
+								"key": "commerce",
+								"value": "MEDICAL",
+								"type": "text"
+							},
+							{
+								"key": "channel",
+								"value": "WEB",
+								"type": "text"
+							},
+							{
+								"key": "sucursal",
+								"value": "coquimbo",
+								"type": "text"
+							},
+							{
+								"key": "usuario",
+								"value": "14515778",
+								"type": "text"
+							},
+							{
+								"key": "traceId",
+								"value": "123456789",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/bff/ingress/users?userId=145157781",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"bff",
+								"ingress",
+								"users"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "145157781"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "bff admin 2023 health",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
 			"request": {
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "country",
+						"value": "CL",
+						"type": "text"
+					},
+					{
+						"key": "commerce",
+						"value": "MEDICAL",
+						"type": "text"
+					},
+					{
+						"key": "channel",
+						"value": "WEB",
+						"type": "text"
+					},
+					{
+						"key": "sucursal",
+						"value": "coquimbo",
+						"type": "text"
+					},
+					{
+						"key": "usuario",
+						"value": "14515778",
+						"type": "text"
+					},
+					{
+						"key": "traceId",
+						"value": "123456789",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    user: \"1234\"\n}",
+					"raw": "",
 					"options": {
 						"raw": {
-							"language": "javascript"
+							"language": "json"
 						}
 					}
 				},
@@ -33,266 +651,6 @@
 						"bff",
 						"ingress",
 						"health"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Add User",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "country",
-						"value": "CL",
-						"type": "text"
-					},
-					{
-						"key": "commerce",
-						"value": "MEDICAL",
-						"type": "text"
-					},
-					{
-						"key": "channel",
-						"value": "WEB",
-						"type": "text"
-					},
-					{
-						"key": "sucursal",
-						"value": "coquimbo",
-						"type": "text"
-					},
-					{
-						"key": "usuario",
-						"value": "14515778",
-						"type": "text"
-					},
-					{
-						"key": "traceid",
-						"value": "123456789",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"userId\": 14515778\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "localhost:3000/api/bff/ingress/users",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"api",
-						"bff",
-						"ingress",
-						"users"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Get User",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "country",
-						"value": "CL",
-						"type": "text"
-					},
-					{
-						"key": "commerce",
-						"value": "MEDICAL",
-						"type": "text"
-					},
-					{
-						"key": "channel",
-						"value": "WEB",
-						"type": "text"
-					},
-					{
-						"key": "sucursal",
-						"value": "coquimbo",
-						"type": "text"
-					},
-					{
-						"key": "usuario",
-						"value": "14515778",
-						"type": "text"
-					},
-					{
-						"key": "traceId",
-						"value": "123456789",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "localhost:3000/api/bff/ingress/users?user=5997002",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"api",
-						"bff",
-						"ingress",
-						"users"
-					],
-					"query": [
-						{
-							"key": "user",
-							"value": "5997002"
-						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Delete User",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "country",
-						"value": "CL",
-						"type": "text"
-					},
-					{
-						"key": "commerce",
-						"value": "MEDICAL",
-						"type": "text"
-					},
-					{
-						"key": "channel",
-						"value": "WEB",
-						"type": "text"
-					},
-					{
-						"key": "sucursal",
-						"value": "coquimbo",
-						"type": "text"
-					},
-					{
-						"key": "usuario",
-						"value": "14515778",
-						"type": "text"
-					},
-					{
-						"key": "traceId",
-						"value": "123456789",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "localhost:3000/api/bff/ingress/users?user=5997002",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"api",
-						"bff",
-						"ingress",
-						"users"
-					],
-					"query": [
-						{
-							"key": "user",
-							"value": "5997002"
-						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Get User Copy",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "",
-					"options": {
-						"raw": {
-							"language": "javascript"
-						}
-					}
-				},
-				"url": {
-					"raw": "localhost:3000/api/bff/ingress/users?country=CL&commerce=MEDICAL&channel=WEB&sucursal=coquimbo&usuario=14515778&traceId=123456789",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"api",
-						"bff",
-						"ingress",
-						"users"
-					],
-					"query": [
-						{
-							"key": "country",
-							"value": "CL"
-						},
-						{
-							"key": "commerce",
-							"value": "MEDICAL"
-						},
-						{
-							"key": "channel",
-							"value": "WEB"
-						},
-						{
-							"key": "sucursal",
-							"value": "coquimbo"
-						},
-						{
-							"key": "usuario",
-							"value": "14515778"
-						},
-						{
-							"key": "traceId",
-							"value": "123456789"
-						}
 					]
 				}
 			},
